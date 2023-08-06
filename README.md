@@ -3,11 +3,11 @@
 ### Запуск:
 
 ```bash
-docker build -t tic-tak-toe .
+docker build -t tic-tac-toe .
 ```
 
 ```bash
-docker run -d -p 8000:8000 tic-tak-toe
+docker run -d -p 8000:8000 tic-tac-toe
 ```
 
 #### Перейти на [localhost:8000/docs](http://localhost:8000/docs)

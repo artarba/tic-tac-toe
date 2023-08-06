@@ -40,4 +40,8 @@ async def upload_image(image: UploadFile = File(...)) -> RecognitionListResponse
     # Кропаем изображение
     cropped_image = crop(image_content)
 
-    return RecognitionListResponse(items=recognize_tic_tac_toe(cropped_image))
+    recognition_result = recognize_tic_tac_toe(cropped_image)
+    if len(set(recognition_result)) == 1:
+        raise HTTPException(status_code=400, detail="Символы не обнаружены")
+
+    return RecognitionListResponse(items=recognition_result)
