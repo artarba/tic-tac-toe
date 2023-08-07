@@ -2,6 +2,9 @@
 
 ### Запуск:
 1. Клонируем проект локально
+```bash
+git clone https://github.com/artarba/tic-tac-toe.git
+```
 2. Переходим в папку с проектом
 ```bash
 cd tic-tac-toe
